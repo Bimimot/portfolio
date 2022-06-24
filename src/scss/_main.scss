@@ -14,12 +14,33 @@ body {
     background-color: var(--colorBackground);
     color: var(--colorText);
     transition: color, background-color, 0.6s ease;
+    font-family: 'Roboto';
 }
 
+// .border {
+//     border: 1px solid var(--colorBorder);
+//     border-radius: 2px;
+
+// }
+
 .border {
-    border: 1px solid var(--colorText);
-    border-radius: 2px;
+    position: relative;
+    display: flex;
     padding: 10px;
     box-sizing: border-box;
-    transition: color, 0.6s ease;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 12%;
+        background-color: transparent;
+        border-bottom: 1px solid var(--colorBorder);
+        border-left: 1px solid var(--colorBorder);
+        border-right: 1px solid var(--colorBorder);
+        border-radius: 2px;
+        transition: color, 0.6s ease;
+    }
 }

@@ -4,6 +4,7 @@ $themes: (
       "colorBackground": $color-white,
       "colorText": $color-black,
       "colorPrimary": $color-green,
+      "colorBorder": #c3c3c3,
     ),
   ),
   "dark": (
@@ -11,6 +12,7 @@ $themes: (
       "colorBackground": $color-black,
       "colorText": $color-white,
       "colorPrimary": $color-green,
+      "colorBorder": #404040,
     ),
   ),
 );

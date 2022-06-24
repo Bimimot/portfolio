@@ -1,8 +1,48 @@
+%underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    border-bottom: 1px solid;
+    content: "";
+    transition: width ease 0.3s;
+}
+
 .header {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    gap: 10px;
-    font-size: 1rem;
-    color: var(--colorText);
+
+    &__nav {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    &__point {
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 100;
+        color: var(--colorText);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        height: min-content;
+
+        &::after {
+            @extend %underline;
+            width: 0;
+        }
+
+        &_active_on {
+            &::after {
+                @extend %underline;
+                width: 100%;
+            }
+        }
+
+        &:hover {
+            color: var(--colorPrimary);
+        }
+    }
 }

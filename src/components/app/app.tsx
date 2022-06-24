@@ -18,9 +18,24 @@ export const App = () => {
                 />
             </Header >
             <ContentContainer>
-                MAIN LANDING CONTENT
+                <span id="home">ME ME ME</span>
+            </ContentContainer>
+            <ContentContainer>
+                <span id="about">About</span>
+            </ContentContainer>
+
+            <ContentContainer>
+                <span id="projects">Projects</span>
             </ContentContainer>
             <Footer />
         </div>
     )
 }
+
+// set active class for header-links
+// set right anchors
+// set smooth-scroll
+// icons? for Header?:
+//- home with light ?
+// profile with eyes
+// opnening letter ?
