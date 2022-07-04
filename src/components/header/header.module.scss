@@ -1,48 +1,51 @@
-%underline {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    border-bottom: 1px solid;
-    content: "";
-    transition: width ease 0.3s;
-}
-
 .header {
     display: flex;
+    position: sticky;
+    top: 0;
     width: 100%;
     justify-content: space-around;
+    background-color: var(--colorBackground);
+    transition: color, background-color, 0.6s ease;
+    z-index: 500;
 
     &__nav {
         display: flex;
         position: relative;
         flex-direction: row;
-        gap: 10px;
+        align-items: center;
+        gap: 25px;
     }
 
     &__point {
         position: relative;
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
         font-size: 1.2rem;
         font-weight: 100;
         color: var(--colorText);
-        transition: all 0.3s ease;
+
         text-decoration: none;
         height: min-content;
 
-        &::after {
-            @extend %underline;
-            width: 0;
+        &:hover,
+        &:hover * {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--colorPrimary);
         }
 
         &_active_on {
-            &::after {
-                @extend %underline;
-                width: 100%;
+            text-decoration: underline;
+            &:hover,
+            &:hover * {
+                cursor: default;
+                color: var(--colorText);
             }
         }
 
-        &:hover {
-            color: var(--colorPrimary);
+        &:first-child{
+            margin-right: 5rem;
         }
     }
 }

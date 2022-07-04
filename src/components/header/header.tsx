@@ -1,23 +1,22 @@
 
-import { FC, PropsWithChildren } from 'react';
-import { THeaderPoint } from './proptypes';
-import { HeaderPoint } from './header-point';
+import { FC, PropsWithChildren, useContext } from 'react';
+import { HeaderContext } from '../../data/headerContext';
+import { HeaderPoint } from './';
 import styles from './header.module.scss';
 
-const headerList: THeaderPoint[] = [
-    { text: "About", link: "#about" },
-    { text: "Projects", link: "#projects" },
-    { text: "Contacts", link: "#contacts" },
-];
 
 export const Header: FC<PropsWithChildren> = (props) => {
+    const { state } = useContext(HeaderContext);
+    const homePoint = state.find(item => item.link === "#home");
+    const navList = state.filter(item => item.link !== "#home")
 
     return (
         <div className={`${styles.header} border`}>
             <nav className={styles.header__nav}>
-                {headerList.map(item => <HeaderPoint item={item} />)}
+                {homePoint && <HeaderPoint item={homePoint} />}
+                
+                {navList.map((item, i) => <HeaderPoint item={item} key={i} />)}
             </nav>
-
             {props.children}
         </div>
     )
