@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .content {
     position: relative;
     display: flex;
@@ -5,7 +7,10 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    //height: auto;
-    height: 700px;
+    min-height: calc(100vh - #{$header-height} - 2 * #{$block-gap});
     flex-grow: 1;
+
+    &:last-child{
+        min-height: fit-content;
+    }
 }

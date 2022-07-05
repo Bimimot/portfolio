@@ -13,24 +13,26 @@ export const App = () => {
     const [state, dispatch] = useReducer(reducer, initialHeaderState);
 
     return (
-        <HeaderContext.Provider value={{state, dispatch}}>
+        <HeaderContext.Provider value={{ state, dispatch }}>
             <div className={styles.page}>
                 <Header>
                     <Slider isOn={styleTheme.currentTheme === "DARK"}
                         callback={(mode: boolean) => styleTheme.setTheme(mode ? "DARK" : "LIGHT")}
                     />
                 </Header >
-                <ContentContainer>
-                    <span id="home">ME ME ME</span>
+                <ContentContainer id="home">                
+                    <span>ME ME ME</span>
                 </ContentContainer>
-                <ContentContainer>
-                    <span id="about">About</span>
+                <ContentContainer id="about">
+                    <span>About</span>
+                </ContentContainer>
+                <ContentContainer id="projects">
+                    <span>Projects</span>
+                </ContentContainer>
+                <ContentContainer id="contacts">
+                    <Footer />
                 </ContentContainer>
 
-                <ContentContainer>
-                    <span id="projects">Projects</span>
-                </ContentContainer>
-                <Footer />
             </div>
         </HeaderContext.Provider>
     )
