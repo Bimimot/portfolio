@@ -1,7 +1,6 @@
 import React, { FC, ReactNode, useEffect, useRef, useContext } from 'react';
 import { HeaderContext } from '../../data/headerContext';
 import useOnScreen from '../../helpers/useOnScreen';
-import styles from './content.module.scss';
 
 export const ContentContainer: FC<{ children: ReactNode, id: string }>
     = (props) => {
@@ -16,7 +15,7 @@ export const ContentContainer: FC<{ children: ReactNode, id: string }>
         }, [isOnScreen, dispatch, props.id]);
 
         return (
-            <div className={`border ${styles.content}`} ref={containerRef}>
+            <div className='border content-block' ref={containerRef}>
                 <span className="anchor" id={props.id}></span>
                 {props.children}
             </div>

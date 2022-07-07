@@ -2,8 +2,6 @@
 import { FC, PropsWithChildren, useContext } from 'react';
 import { HeaderContext } from '../../data/headerContext';
 import { HeaderPoint } from './';
-import styles from './header.module.scss';
-
 
 export const Header: FC<PropsWithChildren> = (props) => {
     const { state } = useContext(HeaderContext);
@@ -11,10 +9,10 @@ export const Header: FC<PropsWithChildren> = (props) => {
     const navList = state.filter(item => item.link !== "#home")
 
     return (
-        <div className={`${styles.header} border`}>
-            <nav className={styles.header__nav}>
+        <div className='header border'>
+            <nav className='header__nav'>
                 {homePoint && <HeaderPoint item={homePoint} />}
-                
+
                 {navList.map((item, i) => <HeaderPoint item={item} key={i} />)}
             </nav>
             {props.children}

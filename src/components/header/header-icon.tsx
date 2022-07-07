@@ -6,5 +6,5 @@ export const HeaderIcon: FC<{ icon?: TIcon, active?: boolean }> = (props) => {
     const classStyle = useMemo(() => active ? `icon-${icon} icon-${icon}_active_on` : `icon-${icon}`,
         [icon, active]);
 
-    return (icon ? <span className={classStyle}> </span>: null)
+    return (icon ? <span className={classStyle}> </span> : null)
 }
