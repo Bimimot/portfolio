@@ -7,4 +7,9 @@ export type THeaderPoint = {
     active: boolean
 };
 
+export type TScrollPart = {
+    id: string,
+    part: number
+}
+
 export type TIcon = "home" | "letter" | "desktop" | "profile";

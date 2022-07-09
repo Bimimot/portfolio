@@ -1,18 +1,18 @@
-import React, { FC, ReactNode, useEffect, useRef, useContext } from 'react';
+import { FC, ReactNode, useEffect, useRef, useContext } from 'react';
 import { HeaderContext } from '../../data/headerContext';
-import useOnScreen from '../../helpers/useOnScreen';
+import onScreen from '../../helpers/useOnScreen';
 
 export const ContentContainer: FC<{ children: ReactNode, id: string }>
     = (props) => {
         const containerRef = useRef<HTMLDivElement>(null);
-        const { dispatch } = useContext(HeaderContext);
-        const isOnScreen = useOnScreen({ ref: containerRef, once: false });
+        const { dispatch } = useContext(HeaderContext)
+        const onScreenPart = onScreen({ ref: containerRef });
 
         useEffect(() => {
-            if (isOnScreen) {
-                dispatch({ type: `#${props.id}` })
-            }
-        }, [isOnScreen, dispatch, props.id]);
+            if (onScreenPart > .5) {
+                dispatch(`#${props.id}`);
+            };
+        }, [onScreenPart, props.id, dispatch]);
 
         return (
             <div className='border content-block' ref={containerRef}>

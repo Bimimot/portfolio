@@ -13,7 +13,7 @@ export const HeaderPoint: FC<{ item: THeaderPoint }> =
         return (
             <a href={link}
                 className={classStyle}
-                onClick={() => !active ? dispatch({ type: link }) : null}>
+                onClick={() => !active ? dispatch(link) : null}>
                 <HeaderIcon icon={icon} active={active} />
                 {text}
             </a>

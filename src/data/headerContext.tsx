@@ -8,15 +8,15 @@ export const initialHeaderState: THeaderPoint[] = [
     { text: "Projects", link: "#projects", icon: "desktop", active: false },
     { text: "Contacts", link: "#contacts", icon: "letter", active: false }];
 
-export const reducer = (
+export const headerReducer = (
     state: THeaderPoint[],
-    action: { type: string }) => {
-    return state.map(point => point.link === action.type
+    newLink: string) => {
+    return state.map(point => point.link === newLink
         ? { ...point, active: true } : { ...point, active: false })
 };
 
 export const HeaderContext = React.createContext({} as
     {
         state: THeaderPoint[],
-        dispatch: ({ type }: { type: string }) => void
+        dispatch: (newLink: string) => void
     });

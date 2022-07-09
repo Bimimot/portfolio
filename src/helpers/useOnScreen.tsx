@@ -1,27 +1,20 @@
-import React, { useEffect, useState, useRef, RefObject } from 'react';
+import { useEffect, useState, useRef, RefObject } from 'react';
 
-export default function useOnScreen(data: { ref: RefObject<HTMLElement> | null, once: boolean }) {
-    const { ref, once } = data;
+export default function useOnScreen(data: { ref: RefObject<HTMLElement> | null }) {
+    const { ref } = data;
     const observerRef = useRef<IntersectionObserver | null>(null);
-    const [isOnScreen, setIsOnScreen] = useState(false);
+    const [onScreen, setOnScreen] = useState<number>(0);
 
 
     useEffect(() => {
         observerRef.current = new IntersectionObserver(
             ([entry]) => {
-                if (entry.intersectionRatio === 1 ) {
-                    setIsOnScreen(true);
-                    if (ref && ref.current && observerRef && observerRef.current && once) {
-                        observerRef.current.unobserve(ref.current)
-                    }
-                } else {
-                    setIsOnScreen(false);
-                }
+                setOnScreen(entry.intersectionRatio);
             },
             {
                 root: null,
                 rootMargin: "0px",
-                threshold: 1
+                threshold: [.1, .2, .3, .4, .5, .6, .7, .8, .9, 1]
             }
         );
     }, []);
@@ -34,9 +27,9 @@ export default function useOnScreen(data: { ref: RefObject<HTMLElement> | null, 
                 observerRef.current!.disconnect();
             };
         } else {
-            setIsOnScreen(false)
+            setOnScreen(0)
         }
     }, [ref]);
 
-    return isOnScreen;
+    return onScreen;
 }
