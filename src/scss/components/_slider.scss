@@ -23,7 +23,9 @@
     padding: 0;
     border: 0.1875rem solid var(--colorText);
     cursor: pointer;
-    transition-duration: 0.6s;
+
+    transition: all 0.6s ease;
+    background-color: var(--colorBackground);
 
     &::after {
         @extend .slider-btn;
@@ -31,24 +33,10 @@
     }
 
     &_mode_on {
-        animation: greenBg 0.6s forwards;
+        background-color: $color-green;
         &::after {
             @extend .slider-btn;
             left: 2.9375rem;
         }
-    }
-}
-
-@keyframes greenBg {
-    0% {
-        background-image: none;
-    }
-
-    100% {
-        background-image: radial-gradient(
-            circle farthest-corner at 10% 20%,
-            rgba(14, 174, 87, 1) 0%,
-            rgba(12, 116, 117, 1) 90%
-        );
     }
 }

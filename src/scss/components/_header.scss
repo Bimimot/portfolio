@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: var(--header);
+    justify-content: space-around;
+    background-color: var(--colorBackground);
+    transition: color, background-color, 0.6s ease;
+    z-index: 500;
+
+    &__nav {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__point {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        font-size: 1.2rem;
+        font-weight: 100;
+        color: var(--colorText);
+
+        text-decoration: none;
+        height: min-content;
+
+        &:hover,
+        &:hover * {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--colorPrimary);
+        }
+
+        &_active_on {
+            text-decoration: underline;
+            &:hover,
+            &:hover * {
+                cursor: default;
+                color: var(--colorText);
+            }
+        }
+
+        &:first-child {
+            margin-right: 5rem;
+        }
+    }
+}

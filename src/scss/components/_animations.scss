@@ -1,0 +1,36 @@
+.block-show {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: moveOn .6s ease forwards;
+}
+
+@keyframes moveOn{
+    from{
+    opacity: 0;
+    transform: translateY(15px);
+    }
+    to{
+    opacity: 1;
+    transform: translateY(0px);
+    }
+}
+
+//-----------------------------------
+.underline-draw {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: 1px solid $color-green;
+    animation: onDraw .3s ease forwards;
+}
+
+@keyframes onDraw {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+//-----------------------------------

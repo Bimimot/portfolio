@@ -1,9 +1,13 @@
 
-import { FC, PropsWithChildren, useContext } from 'react';
+import { useContext } from 'react';
 import { HeaderContext } from '../../data/headerContext';
 import { HeaderPoint } from './';
+import { Slider } from '../slider/slider';
+import StyleTheme from '../../helpers/StyleTheme';
+const styleTheme = new StyleTheme("DARK");
 
-export const Header: FC<PropsWithChildren> = (props) => {
+
+export const Header = () => {
     const { state } = useContext(HeaderContext);
     const homePoint = state.find(item => item.link === "#home");
     const navList = state.filter(item => item.link !== "#home")
@@ -15,7 +19,10 @@ export const Header: FC<PropsWithChildren> = (props) => {
 
                 {navList.map((item, i) => <HeaderPoint item={item} key={i} />)}
             </nav>
-            {props.children}
+            <Slider
+                isOn={styleTheme.currentTheme === "DARK"}
+                callback={(mode: boolean) => styleTheme.setTheme(mode ? "DARK" : "LIGHT")}
+            />
         </div>
     )
 }

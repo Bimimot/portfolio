@@ -1,0 +1,25 @@
+.me {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto 20% auto 0;
+
+    &__slogan {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.5rem;
+        gap: 5px;
+    }
+
+    &__line {
+        opacity: inherit;
+    }
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: $color-green;
+}
