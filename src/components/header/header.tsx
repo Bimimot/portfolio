@@ -6,7 +6,6 @@ import { Slider } from '../slider/slider';
 import StyleTheme from '../../helpers/StyleTheme';
 const styleTheme = new StyleTheme("DARK");
 
-
 export const Header = () => {
     const { state } = useContext(HeaderContext);
     const homePoint = state.find(item => item.link === "#home");
@@ -16,7 +15,6 @@ export const Header = () => {
         <div className='header border'>
             <nav className='header__nav'>
                 {homePoint && <HeaderPoint item={homePoint} />}
-
                 {navList.map((item, i) => <HeaderPoint item={item} key={i} />)}
             </nav>
             <Slider
