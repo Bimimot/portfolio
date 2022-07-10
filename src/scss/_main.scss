@@ -18,11 +18,10 @@ body {
     font-family: "Roboto";
 }
 
-// .border {
-//     border: 1px solid var(--colorBorder);
-//     border-radius: 2px;
-
-// }
+::selection {
+    background: $color-green;
+    color: var(--colorText);
+}
 
 .page {
     display: flex;
@@ -34,7 +33,7 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    
+
     box-sizing: border-box;
     max-width: 1200px;
 }
@@ -70,9 +69,17 @@ body {
     left: 0;
 }
 
+.row {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
 
-
-
+.column {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
 
 .content-block {
     position: relative;
@@ -106,4 +113,3 @@ body {
 .color-primary {
     color: $color-green;
 }
-
