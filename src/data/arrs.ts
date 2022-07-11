@@ -50,7 +50,7 @@ export const projectsArr: TProject[] = [
     },
     {
         title: "News Finder",
-        url: "https://divplan.com/app#",
+        url: "https://bimimot.github.io/news-finder/",
         description: "The small search engine",
         stack:
         {
