@@ -5,10 +5,16 @@ import Code from "./icons/IconCode";
 import Gear from "./icons/IconGear";
 import Wrench from "./icons/IconWrench";
 
+import Github from "./icons/IconGithub";
+
 const componentsLib = {
     code: Code,
     gear: Gear,
-    wrench: Wrench
+    wrench: Wrench,
+    github: Github,
+    gmail: Github,
+    linkedin: Github,
+    telegram: Github
 };
 
 const SvgIcon = React.memo(

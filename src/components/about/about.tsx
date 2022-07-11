@@ -1,5 +1,6 @@
 import { FC, useRef, memo } from "react";
 import useOnScreen from "../../helpers/useOnScreen";
+import SvgIcon from "../svg-icon/SvgIcon";
 import avatarSrc from "../../images/avatar.jpeg";
 import { textsArr, skillsArr } from "../../data/arrs";
 
@@ -12,6 +13,7 @@ export const About = memo(
                     <Avatar />
                 </div>
                 <Skills />
+                <SvgIcon name="github" size={42} color /> 
             </div>
 
         </>)

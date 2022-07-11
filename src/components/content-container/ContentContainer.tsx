@@ -17,10 +17,10 @@ export const ContentContainer: FC<{ children: ReactNode, id: string }>
         }, [onScreenPart, prevOnScreenPart, props.id, dispatch]);
 
         return (
-            <div className='border content-block' ref={containerRef}>
+            <article className='section-border content-block' ref={containerRef}>
                 <span className="anchor" id={props.id}></span>
                 {props.children}
-            </div>
+            </article>
         )
     }
 

@@ -14,13 +14,14 @@ export type TScrollPart = {
 
 export type TIconHeader = "home" | "letter" | "desktop" | "profile";
 
-export type TIconSvgName = "code" | "gear" | "wrench";
+export type TIconSvgName =
+    "code" | "gear" | "wrench" |
+    "github" | "gmail" | "linkedin" | "telegram";
 
 export type TIconSvg = {
     name: TIconSvgName,
-    width?: number,
-    height?: number,
-    color: boolean
+    size?: number,
+    color?: boolean
 };
 
 export type TProject = {
