@@ -104,18 +104,24 @@ body {
     font-size: 3rem;
     margin: 0;
     line-height: 3.1rem;
+
+    &_type_block {
+        line-height: 1.6;
+        font-size: 1.4rem;
+        font-weight: normal;
+        margin: 3px;
+        color: $color-green;
+    }
 }
 
 .subtitle {
     font-size: 1.5rem;
-}
-
-.blocktitle {
-    line-height: 1.4;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin: 0;
-    color: $color-green;
+    &_type_block {
+        line-height: 1.4;
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin: 3px;
+    }
 }
 
 .color-primary {

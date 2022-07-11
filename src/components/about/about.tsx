@@ -42,7 +42,7 @@ const Skills = () => {
         <div className="">
             {skillsArr.map((skill, i) =>
                 <div className="skill row" key={i}>
-                    <h3 className="blocktitle">{skill.title}</h3>
+                    <h3 className="title title_type_block">{skill.title}</h3>
                     <p>{skill.items}</p>
                 </div>)}
         </div>

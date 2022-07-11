@@ -2,17 +2,25 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--colorText);
     border-radius: 4px;
-    padding: 5px;
     text-decoration: none;
     color: var(--colorText);
-    width: 300px;
-    height: 300px;
-    padding: .5rem;
+    background-color: $color-card-back;
+    min-width: 200px;
+    max-width: 30%;
+    box-shadow: 0 17px 58px -16px rgba(8,29,45,.1);
+
 
     &:hover {
         border-color: $color-green;
+    }
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        margin: .5rem 15%;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1;
     }
 
     &__stacks {
@@ -20,6 +28,7 @@
         position: relative;
         flex-direction: column;
         gap: 5px;
+        margin: 1rem .5rem;
         list-style: none;
         padding: 0;
     }
@@ -28,7 +37,34 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        font-size: .875rem;
+        font-size: 0.875rem;
         gap: 10px;
+    }
+
+    &__image-container {
+        position: relative;
+        display: flex;
+        justify-self: end;
+        width: 100%;
+        margin: 0;
+        border-radius: 0 0 4px 4px;
+        padding-bottom: 60%;
+    }
+
+    &__image {
+        position: absolute;
+        display: inline-flex;
+        flex-shrink: 0;
+        min-width: 100%;
+        max-height: 100%;
+        justify-self: center;
+        align-self: center;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0 0 4px 4px;
+        object-fit: fill;
     }
 }

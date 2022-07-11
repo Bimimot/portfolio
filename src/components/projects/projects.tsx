@@ -16,27 +16,25 @@ const projectsArr: TProject[] = [
     {
         title: "DivPlan",
         url: "https://divplan.com/app#",
-        description: "Frontend",
+        description: "The dividend tracker for investors",
         stack:
         {
             langs: ["JavaSript, SCSS, HTML"],
             libs: ["React", "Redux", "i18next", "Chart.js", "Hbs"],
-            tools: ["GitLab", "Figma", "Postman"]
-        }
-        ,
-
+            tools: ["GitLab", "Webpack", "Figma", "REST API", "Postman"]
+        },
         imageUrl: divplanImage
     }
 ];
 
 export const Projects = () => {
     return (
-        <div>
-            {projectsArr.map((project, i) => <ProjectCard key={i} project={project} />)}
-        </div>
+        <>
+            {projectsArr.map((project, i) =>
+                <ProjectCard key={i} project={project} />)}
+        </>
     )
 }
-
 
 
 const ProjectCard: FC<{ project: TProject }> = (props) => {
@@ -51,20 +49,24 @@ const ProjectCard: FC<{ project: TProject }> = (props) => {
 
     return (
         <div className='project'>
-            <a className='blocktitle' href={url} target="blank">{title}</a>
-            <p>{description}</p>
+            <div className='project__intro'>
+                <a className='title title_type_block' href={url} target="blank">{title}</a>
+                <p className='subtitle subtitle_type_block'>{description}</p>
+            </div>
             <ul className='project__stacks'>
                 <ProjectStack items={stack.langs} icon="code" />
                 <ProjectStack items={stack.libs} icon="gear" />
                 <ProjectStack items={stack.tools} icon="wrench" />
             </ul>
-            {/* <img className='project__image' src={imageUrl} alt={title} /> */}
+            <div className='project__image-container'>
+                <img className='project__image' src={imageUrl} alt={title} />
+            </div>
         </div>
     )
 }
 
 
-const ProjectStack: FC<{ items: string[], icon:any }> = (props) => {
+const ProjectStack: FC<{ items: string[], icon: any }> = (props) => {
     const { items, icon } = props;
     const text = items.join(', ');
     return (
