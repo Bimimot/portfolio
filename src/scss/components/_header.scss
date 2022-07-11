@@ -53,22 +53,22 @@
     }
 }
 
-.cv{
-font-size: 1.2rem;
-letter-spacing: .1rem;
-border-radius: 50%;
-border: 1px solid;
-text-decoration: none;
-align-items: center;
-display: flex;
-font-weight: bold;
-padding: .1rem;
-width: 2.4rem;
-height: 2.4rem;
-justify-content: center;
-color: $color-green;   
-    transition: font-size .2s ease;
-    &:hover{
+.cv {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    border-radius: 50%;
+    border: 1px solid;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    padding: 0.1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    justify-content: center;
+    color: $color-green;
+    transition: font-size 0.2s ease;
+    &:hover {
         font-size: 1.35rem;
     }
 }

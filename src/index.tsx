@@ -12,5 +12,4 @@ root.render(<App />);
 //hover for mobile
 //mobile layout
 //readme
-//cv
 //logo
