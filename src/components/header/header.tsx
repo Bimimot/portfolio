@@ -12,7 +12,7 @@ export const Header = () => {
     const navList = state.filter(item => item.link !== "#home")
 
     return (
-        <div className='header border'>
+        <div className='header'>
             <nav className='header__nav'>
                 {homePoint && <HeaderPoint item={homePoint} />}
                 {navList.map((item, i) => <HeaderPoint item={item} key={i} />)}

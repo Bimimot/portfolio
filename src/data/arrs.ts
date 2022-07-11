@@ -1,4 +1,4 @@
-import { THeaderPoint, TProject } from "../types";
+import { THeaderPoint, TProject, TIconSvgName } from "../types";
 import divplanImage from '../images/projects/divplan.jpg';
 import burgerImage from '../images/projects/burger.jpg';
 import newsImage from '../images/projects/news.jpg';
@@ -60,4 +60,10 @@ export const projectsArr: TProject[] = [
         },
         imageUrl: newsImage
     }
+];
+
+export const contactsArr: Array<{ icon: TIconSvgName, url: string }> = [
+    { icon: "gmail", url: "mailto:stepan.popov.dev@gmail.com" },
+    { icon: "linkedin", url: "https://www.linkedin.com/in/popov-stepan/" },
+    { icon: "telegram", url: "tg://resolve?domain=StepanBim" }
 ];

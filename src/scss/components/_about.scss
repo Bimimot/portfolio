@@ -33,25 +33,21 @@
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    border: 2px solid #118c4e;
-    padding: 5px;
     margin: auto 20px;
     box-sizing: border-box;
     filter: grayscale(1);
     transition: filter 0.3s ease;
 
     &:hover {
-        filter: grayscale(.2);
+        filter: grayscale(0.2);
     }
 }
-
 
 .skill {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    justify-self: end;
 
-    &__items{
+    &__items {
     }
 }

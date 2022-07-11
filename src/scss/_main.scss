@@ -23,7 +23,9 @@ body {
     color: var(--colorText);
 }
 
-svg{
+svg {
+    display: flex;
+    position: relative;
     flex-shrink: 0;
     flex-grow: 0;
 }
@@ -32,7 +34,7 @@ svg{
     display: flex;
     position: relative;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     padding: 0px 2px 5px;
     gap: $block-gap;
     width: 100%;
@@ -62,6 +64,7 @@ svg{
         border-right: 1px solid var(--colorBorder);
         border-radius: 2px;
         transition: color, 0.6s ease;
+        z-index: -1;
     }
 }
 
@@ -131,4 +134,20 @@ svg{
 
 .color-primary {
     color: $color-green;
+}
+
+.cirlce-green {
+    border-radius: 50%;
+    border: 2px solid $color-green;
+    padding: 5px;
+}
+
+.link {
+    margin: 0 auto;
+    color: var(--colorText);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+        color: $color-green;
+    }
 }

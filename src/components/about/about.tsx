@@ -13,7 +13,9 @@ export const About = memo(
                     <Avatar />
                 </div>
                 <Skills />
-                <SvgIcon name="github" size={42} color /> 
+                <a className="link cirlce-green" href="https://github.com/Bimimot" target="blank">
+                    <SvgIcon name="github" size={60} /> 
+                </a>
             </div>
 
         </>)
@@ -28,7 +30,7 @@ const AboutParagrpaphs = () => {
     )
 }
 
-const Avatar = () => <img src={avatarSrc} className="avatar" alt="avatar" />;
+const Avatar = () => <img src={avatarSrc} className="avatar cirlce-green" alt="avatar" />;
 
 const AboutParagrpaph: FC<{ text: string }> =
     (props) => {

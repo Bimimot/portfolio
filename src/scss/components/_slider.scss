@@ -21,7 +21,7 @@
     z-index: 0;
     margin: 0;
     padding: 0;
-    border: 0.1875rem solid var(--colorText);
+    border: .5px solid var(--colorText);
     cursor: pointer;
 
     transition: all 0.6s ease;
@@ -33,7 +33,6 @@
     }
 
     &_mode_on {
-        background-color: $color-green;
         &::after {
             @extend .slider-btn;
             left: 2.9375rem;

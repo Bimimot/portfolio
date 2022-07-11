@@ -6,15 +6,18 @@ import Gear from "./icons/IconGear";
 import Wrench from "./icons/IconWrench";
 
 import Github from "./icons/IconGithub";
+import Gmail from "./icons/IconGmail";
+import Linkedin from "./icons/IconLinkedin";
+import Telegram from "./icons/IconTelegram";
 
 const componentsLib = {
     code: Code,
     gear: Gear,
     wrench: Wrench,
     github: Github,
-    gmail: Github,
-    linkedin: Github,
-    telegram: Github
+    gmail: Gmail,
+    linkedin: Linkedin,
+    telegram: Telegram
 };
 
 const SvgIcon = React.memo(
