@@ -1,38 +1,14 @@
 import { FC } from 'react';
-import divplanImage from '../../images/projects/divplan.jpg';
 import SvgIcon from '../svg-icon/SvgIcon';
-
-type TProjectStacks = { [key in "langs" | "libs" | "tools"]: string[] };
-
-type TProject = {
-    title: string,
-    url: string,
-    description: string,
-    stack: TProjectStacks,
-    imageUrl: string
-};
-
-const projectsArr: TProject[] = [
-    {
-        title: "DivPlan",
-        url: "https://divplan.com/app#",
-        description: "The dividend tracker for investors",
-        stack:
-        {
-            langs: ["JavaSript, SCSS, HTML"],
-            libs: ["React", "Redux", "i18next", "Chart.js", "Hbs"],
-            tools: ["GitLab", "Webpack", "Figma", "REST API", "Postman"]
-        },
-        imageUrl: divplanImage
-    }
-];
+import { TIconSvgName, TProject } from '../../types';
+import { projectsArr } from '../../data/arrs';
 
 export const Projects = () => {
     return (
-        <>
+        <div className='projects'>
             {projectsArr.map((project, i) =>
                 <ProjectCard key={i} project={project} />)}
-        </>
+        </div>
     )
 }
 
@@ -63,10 +39,9 @@ const ProjectCard: FC<{ project: TProject }> = (props) => {
             </div>
         </div>
     )
-}
+};
 
-
-const ProjectStack: FC<{ items: string[], icon: any }> = (props) => {
+const ProjectStack: FC<{ items: string[], icon: TIconSvgName }> = (props) => {
     const { items, icon } = props;
     const text = items.join(', ');
     return (

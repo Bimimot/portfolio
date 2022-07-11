@@ -22,3 +22,13 @@ export type TIconSvg = {
     height?: number,
     color: boolean
 };
+
+export type TProject = {
+    title: string,
+    url: string,
+    description: string,
+    stack: TProjectStacks,
+    imageUrl: string
+};
+
+export type TProjectStacks = { [key in "langs" | "libs" | "tools"]: string[] };

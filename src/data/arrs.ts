@@ -1,4 +1,7 @@
-import { THeaderPoint } from "../types";
+import { THeaderPoint, TProject } from "../types";
+import divplanImage from '../images/projects/divplan.jpg';
+import burgerImage from '../images/projects/burger.jpg';
+import newsImage from '../images/projects/news.jpg';
 
 export const headerArr: THeaderPoint[] = [
     { text: "", link: "#home", icon: "home", active: false },
@@ -18,4 +21,43 @@ export const skillsArr: {title: string, items: string}[] = [
     { title: "Languages", items: "JavaScript, TypeScript, HTML5, CSS/SCSS" },
     { title: "Frameworks", items: "React, React Hooks, Redux, i18n, Express.js" },
     { title: "Testing", items: "Jest, Cyprus" }
+];
+
+export const projectsArr: TProject[] = [
+    {
+        title: "DivPlan",
+        url: "https://divplan.com/app#",
+        description: "The dividend tracker for investors",
+        stack:
+        {
+            langs: ["JavaSript, SCSS, HTML"],
+            libs: ["React", "Redux", "i18next", "Chart.js", "Hbs"],
+            tools: ["GitLab", "Webpack", "Figma", "Postman"]
+        },
+        imageUrl: divplanImage
+    },
+    {
+        title: "Space Burger",
+        url: "https://bimimot.github.io/burger/",
+        description: "Order menu for custom burger",
+        stack:
+        {
+            langs: ["TypeSript, CSS, HTML"],
+            libs: ["React", "Redux", "React-dnd", "Jest", "Cypress"],
+            tools: ["GitHub", "Figma", "Websocket", "CSS.modules"]
+        },
+        imageUrl: burgerImage
+    },
+    {
+        title: "News Finder",
+        url: "https://divplan.com/app#",
+        description: "The small search engine",
+        stack:
+        {
+            langs: ["JavaSript, CSS, HTML"],
+            libs: ["Express", "MongoDB", "Node.js", "Nginx"],
+            tools: ["GitHub", "Webpack", "Figma", "Postman"]
+        },
+        imageUrl: newsImage
+    }
 ];
