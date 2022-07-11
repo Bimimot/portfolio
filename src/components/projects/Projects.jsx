@@ -1,1 +1,0 @@
-export const Projects = () => <span>Projects</span>

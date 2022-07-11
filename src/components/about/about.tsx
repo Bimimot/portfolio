@@ -1,28 +1,16 @@
 import { FC, useRef, memo } from "react";
 import useOnScreen from "../../helpers/useOnScreen";
-import avatarSrc from "../../images/avatar.jpg";
-
-const textsArr = [
-    "I've been working efficiently in telecom companies in various positions for 15 years. When I was satisfied my management job less I decided to change my profession.",
-    "Programming always attracted me as a field of unlimited opportunities for self - development. In 2019 - 2020 I was studying at Yandex School of Data Analysis.",
-    "After successful passing of the graduation project  I  started working as a programmer.My self - organization skills and perseverance to goals have helped me become a part of the professional IT - team.",
-    "At outside working and studying hours I like to play the block - flute.Programming and music have a lot of common - a well - written code is like a beautifully played melody."
-];
-
-const skillsArr = [
-    { title: "Languages", items: "JavaScript, TypeScript, HTML5, CSS/SCSS" },
-    { title: "Frameworks", items: "React, React Hooks, Redux, i18n, Express.js" },
-    { title: "Testing", items: "Jest, Cyprus" }
-];
+import avatarSrc from "../../images/avatar.jpeg";
+import { textsArr, skillsArr } from "../../data/arrs";
 
 export const About = memo(
     () => {
         return (<>
             <div className="about">
                 <div className="row">
-                    <AboutParagrpaphs/>
-                    <Avatar/>
-                </div>                
+                    <AboutParagrpaphs />
+                    <Avatar />
+                </div>
                 <Skills />
             </div>
 
@@ -54,8 +42,8 @@ const Skills = () => {
         <div className="">
             {skillsArr.map((skill, i) =>
                 <div className="skill row" key={i}>
-                    <h3 className="skill__title">{skill.title}</h3>
-                    <p className="skill__items">{skill.items}</p>
+                    <h3 className="blocktitle">{skill.title}</h3>
+                    <p>{skill.items}</p>
                 </div>)}
         </div>
     )

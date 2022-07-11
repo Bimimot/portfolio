@@ -29,11 +29,11 @@
 
 .avatar {
     position: relative;
-    display: block;
+    display: flex;
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
-    border: 1px solid #118c4e;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #118c4e;
     padding: 5px;
     margin: auto 20px;
     box-sizing: border-box;
@@ -51,14 +51,6 @@
     align-items: center;
     gap: 15px;
     justify-self: end;
-
-    &__title {
-        color: $color-green;
-        line-height: 1.4;
-        font-size: 1.2rem;
-        font-weight: normal;
-        margin: 0;
-    }
 
     &__items{
     }

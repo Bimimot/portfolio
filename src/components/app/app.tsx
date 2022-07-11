@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import { Header } from '../header/header';
 import { Me } from '../me/me-block';
 import { About } from '../about/about';
-import { Projects } from '../projects/Projects';
+import { Projects } from '../projects/projects';
 import { Contacts } from '../contacts/contacts';
 import { ContentContainer } from '../content-container/ContentContainer';
 import { HeaderContext, initialHeaderState, headerReducer } from '../../data/headerContext';

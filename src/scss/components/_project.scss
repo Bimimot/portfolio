@@ -1,0 +1,59 @@
+%glass {
+            position: absolute;
+        content: "";
+        z-index: 50;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $color-green;
+        transition: opacity 0.6s ease;
+}
+
+.project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--colorText);
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--colorText);
+    width: 300px;
+    height: 300px;
+
+    &::after {
+        @extend %glass;
+        opacity: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+        border-color: $color-green;
+
+
+        &::after {
+        @extend %glass;
+        opacity: .8;
+        }
+
+        & .project__image{
+            opacity: 1;
+        }
+    }
+
+    &__image{
+        position: absolute;
+        opacity: 0;
+        z-index: 30;
+        content: "";
+        top: 5%;
+        bottom: 5%;
+        left: 5%;
+        right: 5%;
+        height: 90%;
+        width: 90%;
+        border-radius: 4px;
+        transition: opacity 0.6s ease;
+    }
+}

@@ -1,12 +1,8 @@
 import React from "react";
 import { THeaderPoint } from "../types";
+import { headerArr } from "./arrs";
 
-
-export const initialHeaderState: THeaderPoint[] = [
-    { text: "", link: "#home", icon: "home", active: false },
-    { text: "About", link: "#about", icon: "profile", active: false },
-    { text: "Projects", link: "#projects", icon: "desktop", active: false },
-    { text: "Contacts", link: "#contacts", icon: "letter", active: false }];
+export const initialHeaderState: THeaderPoint[] = headerArr;
 
 export const headerReducer = (
     state: THeaderPoint[],
