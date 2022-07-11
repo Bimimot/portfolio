@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import { HeaderContext } from '../../data/headerContext';
 import { HeaderPoint } from './';
+import { HeaderCv } from './header-cv';
 import { Slider } from '../slider/slider';
 import StyleTheme from '../../helpers/StyleTheme';
 const styleTheme = new StyleTheme("DARK");
@@ -17,6 +18,7 @@ export const Header = () => {
                 {homePoint && <HeaderPoint item={homePoint} />}
                 {navList.map((item, i) => <HeaderPoint item={item} key={i} />)}
             </nav>
+            <HeaderCv/>
             <Slider
                 isOn={styleTheme.currentTheme === "DARK"}
                 callback={(mode: boolean) => styleTheme.setTheme(mode ? "DARK" : "LIGHT")}
