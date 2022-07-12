@@ -20,7 +20,7 @@ export type TIconSvgName =
 
 export type TIconSvg = {
     name: TIconSvgName,
-    size?: number,
+    size?: string,
     color?: boolean
 };
 

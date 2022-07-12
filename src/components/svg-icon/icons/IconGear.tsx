@@ -1,10 +1,10 @@
 const SVG = ({
-    size = 24,
+    size = "1.5rem",
     color = false
 }) => (
     <svg
-        width={`${size}px`}
-        height={`${size}px`}
+        width={size}
+        height={size}
         fill="currentColor"
         viewBox="0 0 256.00098 256.00098"
         xmlns="http://www.w3.org/2000/svg"

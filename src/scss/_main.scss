@@ -3,11 +3,11 @@ html {
     scroll-behavior: smooth;
 
     @media screen and(max-width: 767px) {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     @media screen and(max-width: 480px) {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -77,18 +77,6 @@ svg {
     left: 0;
 }
 
-.row {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-}
-
-.column {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-}
-
 .content-block {
     position: relative;
     display: flex;
@@ -104,10 +92,6 @@ svg {
     }
 }
 
-.text {
-    font-size: 1rem;
-}
-
 .title {
     font-size: 3rem;
     margin: 0;
@@ -115,9 +99,9 @@ svg {
 
     &_type_block {
         line-height: 1.6;
-        font-size: 1.4rem;
+        font-size: 1.375rem;
         font-weight: normal;
-        margin: 3px;
+        margin: 3px 0;
         color: $color-green;
     }
 }
@@ -128,7 +112,7 @@ svg {
         line-height: 1.4;
         font-size: 1.2rem;
         font-weight: normal;
-        margin: 3px;
+        margin: 3px 0;
     }
 }
 

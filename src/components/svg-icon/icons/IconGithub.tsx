@@ -1,9 +1,9 @@
 const SVG = ({
-    size = 48,
+    size = "3rem",
     color = false
 }) => (
     <svg
-        width={`${size}px`}
+        width={size}
         fill="currentColor"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"

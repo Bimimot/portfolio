@@ -5,6 +5,16 @@
     margin: auto 20%;
     gap: 30px;
 
+    &__description {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+
+        @media screen and(max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+
     &__block {
         display: flex;
         flex-direction: column;
@@ -31,23 +41,32 @@
     position: relative;
     display: flex;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin: auto 20px;
+    width: 12rem;
+    height: 12rem;
+    margin: auto 1.25rem;
     box-sizing: border-box;
     filter: grayscale(1);
     transition: filter 0.3s ease;
+    flex-shrink: 0;
 
     &:hover {
         filter: grayscale(0.2);
     }
+
+    @media screen and(max-width: 767px) {
+        margin: 0 auto;
+    }
 }
 
 .skill {
+    display: flex;
+    position: relative;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
 
     &__items {
+        text-align: right;
     }
 }

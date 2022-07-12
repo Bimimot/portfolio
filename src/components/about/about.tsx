@@ -8,13 +8,13 @@ export const About = memo(
     () => {
         return (<>
             <div className="about">
-                <div className="row">
+                <div className="about__description">
                     <AboutParagrpaphs />
                     <Avatar />
                 </div>
                 <Skills />
                 <a className="link cirlce-green" href="https://github.com/Bimimot" target="blank">
-                    <SvgIcon name="github" size={60} /> 
+                    <SvgIcon name="github" size="3.75rem" />
                 </a>
             </div>
 
@@ -45,9 +45,9 @@ const Skills = () => {
     return (
         <div className="">
             {skillsArr.map((skill, i) =>
-                <div className="skill row" key={i}>
+                <div className="skill" key={i}>
                     <h3 className="title title_type_block">{skill.title}</h3>
-                    <p>{skill.items}</p>
+                    <p className="skill__items">{skill.items}</p>
                 </div>)}
         </div>
     )

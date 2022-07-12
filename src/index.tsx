@@ -10,6 +10,6 @@ const root = createRoot(container!);
 root.render(<App />);
 
 //hover for mobile
-//mobile layout
 //readme
 //logo
+//svg rem or px?

@@ -17,4 +17,8 @@
     &__line {
         opacity: inherit;
     }
+
+    @media screen and(max-width: 480px) {
+        margin:auto;
+    }
 }

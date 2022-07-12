@@ -11,7 +11,7 @@ export const HeaderPoint: FC<{ item: THeaderPoint }> =
         return (
             <a href={link} className={classStyle}        >
                 <HeaderIcon icon={icon} active={active} />
-                {text}
+                <span className='header__text'>{text}</span>
             </a>
         )
     }

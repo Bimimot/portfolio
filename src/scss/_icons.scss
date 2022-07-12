@@ -1,4 +1,5 @@
 %icon-hover {
+
     &:hover {
         cursor: pointer;
         color: var(--colorPrimary);
@@ -208,7 +209,6 @@
         border-radius: 45%;
         border: 1px solid;
         transition: all ease 0.6s;
-
     }
 
     &:after {
@@ -223,7 +223,7 @@
         cursor: default;
         color: var(--colorText);
 
-        &:before{
+        &:before {
             border-color: var(--colorPrimary);
         }
 
