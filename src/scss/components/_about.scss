@@ -48,6 +48,7 @@
     filter: grayscale(1);
     transition: filter 0.3s ease;
     flex-shrink: 0;
+    object-fit: cover;
 
     &:hover {
         filter: grayscale(0.2);
