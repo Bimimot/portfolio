@@ -1,14 +1,20 @@
-# React-boilerplate for SPA
+# My personal site
 
-- Typescript React-components,
-- SCSS with scss.modules,
-- Dark theme is controled by Slider-component,
-- The localstorage saves the theme for using after refresh,
-- Responsive layout (font-size only)
+- Typescript & React,
+- Navigation with Intersection Observer API,
+- Dark theme is controled by slider-component and it's saved with localstorage,
+- Responsive layout,
+- Animated SCSS icons for header.
 
 ## Available Scripts
-In the project directory, you can use standart scripts:
+In the project directory, you can use standart scripts.
 
 ### `npm start`
 ### `npm run build`
 ### `npm run eject`
+
+```
+If you use this work, 
+please give me proper credit and make a link to profile.
+Thank you.
+```

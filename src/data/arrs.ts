@@ -11,7 +11,7 @@ export const headerArr: THeaderPoint[] = [
 ];
 
 export const textsArr: string[] = [
-    "I've been working efficiently in telecom companies in various positions for 15 years. When I was satisfied my management job less I decided to change my profession.",
+    "I've been working efficiently in telecom companies in various positions. For a few years I was managing successfully  teams but at some point I realized that I enjoy more building software rather than managing people. So I decided to change my career.",
     "Programming always attracted me as a field of unlimited opportunities for self - development. In 2019 - 2020 I was studying at Yandex School of Data Analysis.",
     "After successful passing of the graduation project  I  started working as a programmer.My self - organization skills and perseverance to goals have helped me become a part of the professional IT - team.",
     "At outside working and studying hours I like to play the block - flute.Programming and music have a lot of common - a well - written code is like a beautifully played melody."
