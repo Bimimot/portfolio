@@ -81,9 +81,11 @@
     height: 2.4rem;
     justify-content: center;
     color: $color-green;
-    transition: font-size 0.2s ease;
+    transition: all 0.3s ease;
     &:hover {
-        font-size: 1.35rem;
+        border-color: $color-green;
+        background-color: $color-green;
+        color: var(--colorBackground);
     }
 
     @media screen and(max-width: 768px) {
